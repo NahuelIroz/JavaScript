@@ -1,0 +1,141 @@
+/* Contenedor principal */
+.calculator {
+    width: 320px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: #0e6ce6;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Display */
+#display {
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+    border-radius: 10px;
+    background: #23272a;
+    color: white;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Diseño del grid para botones */
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Botones generales */
+button {
+    width: 70px;
+    height: 70px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botones numéricos */
+button#0,
+button#1,
+button#2,
+button#3,
+button#4,
+button#5,
+button#6,
+button#7,
+button#8,
+button#9 {
+    background: linear-gradient(145deg, #4caf50, #66bb6a);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button#0:hover,
+button#1:hover,
+button#2:hover,
+button#3:hover,
+button#4:hover,
+button#5:hover,
+button#6:hover,
+button#7:hover,
+button#8:hover,
+button#9:hover {
+    background: linear-gradient(145deg, #66bb6a, #4caf50);
+}
+
+/* Botones de operaciones */
+button#plus,
+button#-,
+button#*,
+button#/ {
+    background: linear-gradient(145deg, #ff9800, #ffa726);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button#plus:hover,
+button#-:hover,
+button#*:hover,
+button#/:hover {
+    background: linear-gradient(145deg, #ffa726, #ff9800);
+}
+
+/* Botón de igual (ocupa dos filas) */
+button#equal {
+    background: linear-gradient(145deg, #2196f3, #42a5f5);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    grid-row: span 2; /* Ocupa dos filas */
+    height: 143px; /* Ajusta la altura automáticamente */
+}
+
+button#equal:hover {
+    background: linear-gradient(145deg, #42a5f5, #2196f3);
+}
+
+/* Botón de borrar */
+button#clear {
+    background: linear-gradient(145deg, #f44336, #e57373);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button#clear:hover {
+    background: linear-gradient(145deg, #e57373, #f44336);
+}
+
+/* Botón de retroceso */
+button#bs {
+    background: linear-gradient(145deg, #9c27b0, #ba68c8);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button#bs:hover {
+    background: linear-gradient(145deg, #ba68c8, #9c27b0);
+}
+
+/* Botón del punto */
+button#. {
+    background: linear-gradient(145deg, #ffeb3b, #ffee58);
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button#.:hover {
+    background: linear-gradient(145deg, #ffee58, #ffeb3b);
+}
